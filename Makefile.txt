@@ -1,0 +1,18 @@
+# Makefile
+
+CC = gcc
+CFLAGS = -Wall
+
+all: cpu_monitor memory_monitor disk_monitor
+
+cpu_monitor: cpu_monitor.c
+    $(CC) $(CFLAGS) cpu_monitor.c -o cpu_monitor
+
+memory_monitor: memory_monitor.c
+    $(CC) $(CFLAGS) memory_monitor.c -o memory_monitor
+
+disk_monitor: disk_monitor.c
+    $(CC) $(CFLAGS) disk_monitor.c -o disk_monitor
+
+clean:
+    rm -f cpu_monitor memory_monitor disk_monitor
